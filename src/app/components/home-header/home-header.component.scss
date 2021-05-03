@@ -1,0 +1,121 @@
+$tab-size: 780px;
+$mob-size: 480px;
+
+header{
+    height: 100%;
+    background-image: url('/assets/img/background/home-header.svg');
+    // background-position: left center;
+
+    display: grid;
+    position: relative;
+    transition: .4s;
+
+    @media screen and ( max-width: $tab-size ) {
+        background-image: url('/assets/img/background/home-header-tab.svg');
+    }
+    @media screen and ( max-width: $mob-size ) {
+        background-image: url('/assets/img/background/home-header-mobile.svg');
+    }
+}
+
+
+
+app-navbar{
+    position: absolute;
+    top: 30px;
+    left: 50%;
+    transform: translate( -50%, 0% );
+    width: 100%;
+
+    max-width: 1560px;
+    box-sizing: border-box;
+    padding: 0px 80px;
+    
+    @media screen and ( max-width: $tab-size ) {
+        padding: 0px 40px;
+    }
+
+    @media screen and ( max-width: $mob-size ) {
+        padding: 0px 20px;
+        top: 20px;
+    }
+}
+
+.info{
+    justify-self: center;
+    align-self: center;
+
+    display: grid;
+    row-gap: 15px;
+    text-align: center;
+
+    position: relative;
+    top: -20px;
+
+    button{
+        margin-top: 15px;
+        justify-self: center;
+        width: 152px;
+    }
+}
+
+h1{
+    @media screen and ( min-width: $mob-size ) and ( max-width: $tab-size ) {
+        font-size: 28px;
+    }
+}
+
+p{
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 95%;
+    color: #757575;
+    @media screen and ( max-width: $mob-size ) {
+        font-size: 14px;
+    }
+}
+
+
+#toNextSection{
+    position: absolute;
+    bottom: 25px;
+    left: 50%;
+    transform: translate( -50%, 0 ); 
+
+    color: #e5e5e5;
+    border: none;
+
+    span{
+        display: grid;
+
+        background: #E5E5E5;
+        border-radius: 2px;
+        width: 2px;
+        height: 20px;
+        margin: 0px auto;
+        transition: .4s;
+        // animation: swing .5s ease-in 2s infinite;
+        animation: swing 1s ease-in .5s 3 ;
+
+    }
+
+    
+    &:hover span{
+        transform: translate( 0px, 10px );
+        animation: none;
+    }
+}
+
+
+@keyframes swing {
+    0%{
+        transform: translate(0, 0px);
+    }
+    50%{
+        transform: translate(0, 5px);
+    }
+    100%{
+        transform: translate(0, 0px);
+    }
+}
+

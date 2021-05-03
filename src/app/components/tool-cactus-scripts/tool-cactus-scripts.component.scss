@@ -1,0 +1,23 @@
+$tab-size: 780px;
+
+.tool{
+    grid-template-columns: 1fr 1fr;
+    .info{
+        padding: 0px 30px;
+    }
+}
+
+.img img{
+    width: 380px;
+}
+
+@media screen and ( max-width: $tab-size ) {
+    .img{
+        padding: 0px 30px;
+        img{
+            width: 100%;
+            max-width: 400px;
+        }
+    }
+}
+

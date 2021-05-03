@@ -1,0 +1,29 @@
+
+$tab-size: 780px;
+nav{
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    column-gap: 20px;
+
+    > :last-child{
+        justify-self: end;
+    }
+    @media screen and ( max-width: 280px ) {
+        grid-template-columns: auto;
+    }
+}
+
+img{
+    height: 54px;
+    @media screen and ( max-width: 280px ) {
+        display: none;
+    }
+    @media screen and ( max-width: $tab-size ) {
+        height: 42px;
+    }
+}
+
+.bg-btn{
+    width: 152px;
+}

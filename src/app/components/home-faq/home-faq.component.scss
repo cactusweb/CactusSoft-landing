@@ -1,0 +1,134 @@
+$tab-size: 780px;
+// $phone-size
+
+
+.faq-cards{
+    display: grid;
+    grid-template-columns: 380px 380px;
+
+    @media screen and ( max-width: 830px ) {
+        grid-template-columns: 375px 375px;
+        gap: 20px;
+    }
+    @media ( max-width: 780px ){
+        margin: 0px 20px;
+        grid-template-columns: minmax( 200px, 380px);
+    }
+
+    @media screen and ( max-width: 240px ) {
+        margin: 0px;
+    }
+    
+    justify-content: center;
+    justify-items: center;
+    gap: 30px;
+
+}
+
+
+.card{
+    display: grid;
+    background: #222222;
+    border-radius: 8px;
+    padding: 25px;
+    padding-bottom: calc( 25px + 17px ) ;
+
+    display: grid;
+    row-gap: 20px;
+    transition: .6s;
+
+    position: relative;
+
+
+    img{
+        display: none;
+        cursor: pointer;
+    }
+    p{
+        color: #757575;
+        transition: .6s;
+    }
+
+
+    @media screen and ( min-width: $tab-size ) {
+        p{
+            max-height: initial !important;
+        }
+        &:hover{
+            border-radius: 2px 8px 8px 2px;
+            p{
+                color: #e4e4e4;
+            }
+
+            .hr{
+                opacity: 1;
+            }
+        }   
+    }
+    
+    @media screen and ( max-width: $tab-size )  {
+        grid-template-columns: 1fr auto;
+        padding: 20px 15px;
+        row-gap: 0px;
+        align-items: center;
+        column-gap: 10px;
+        transition: .6s ;
+
+        p{
+            grid-template-columns: 1/3;
+            color: #e4e4e4;
+            // padding: 10px 0px 0px;
+            max-height: 0px;
+            overflow: hidden;
+            line-height: 13px;
+        }
+        img{
+            display: initial;
+        }
+
+        &.active{
+            border-radius: 2px 8px 8px 2px;
+            p{
+                padding: 10px 0px 0px;
+            }
+    
+            .hr{
+                opacity: 1;
+            }
+        }
+
+    }
+
+
+}
+
+.card .hr{
+    position: absolute;
+    height: 100%;
+    width: 4px;
+    border-radius: 8px;
+    background-color: #00AE98;
+    opacity: 0;
+    transition: .6s;
+}
+
+
+.card h3{
+    @media screen and ( max-width: $tab-size ) {
+        cursor: pointer;
+    }
+}
+
+h2:nth-child(2){
+    display: none;
+    @media screen and ( max-width: $tab-size ) {
+        display: initial;
+    }
+}
+
+h2:first-child{
+    @media screen and ( max-width: $tab-size ) {
+        display: none;
+    }
+}
+

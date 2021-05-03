@@ -1,1 +1,370 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Mitr:wght@200;300;400;500;600;700&display=swap');
+
+
+$primary-color: #00AE98;
+$primary-hover: #00CCB2;
+
+$secondary-color: #262626;
+
+$danger-color: #E56363;
+$btn-radius: 8px;
+$tab-size: 780px;
+
+
+.primary-bg{
+    background-color: $primary-color;
+    &:hover:not( :disabled ){
+        background-color: $primary-hover;
+    }
+}
+
+
+html, body{
+    margin: 0;
+    padding: 0;
+    display: grid;
+    background-color: #262626;
+    overflow: hidden;
+    height: 100vh;
+    transition: .3s;
+}
+
+
+*{
+    font-family: 'Mitr', sans-serif;
+}
+
+app-root{
+    display: grid;
+}
+app-root > *{
+    display: grid;
+}
+
+*{
+    outline: none;
+    &::selection{
+        background-color: $primary-color;
+    }
+    scroll-behavior: smooth;
+}
+
+
+div, section, header, main, footer, nav, form{
+    box-sizing: border-box;
+}
+
+a, button{
+    cursor: pointer;
+    box-sizing: border-box;
+    &:disabled{
+        cursor: default;
+    }
+    transition: .7s;
+}
+
+a{
+    text-decoration: none;
+    color: #fff; 
+}
+
+button{
+    background: none;
+    border: 1px solid #F5F5F5;
+}
+
+ul, li, p, h1, h2, h3, h4{
+    margin: 0;
+    padding: 0;
+}
+
+
+.pointer{
+    cursor: pointer;
+}
+
+
+
+
+
+::-webkit-scrollbar{
+    width:8px;
+    height: 8px;
+    @media screen and ( max-width:$tab-size ) {
+        width: 0px;
+        height: 0px;
+    }
+}
+  
+::-webkit-scrollbar-thumb{
+    border: none;
+    background: $primary-color;
+    transition: .3s;
+}
+  
+::-webkit-scrollbar-thumb:hover{
+    background: $primary-hover;
+}
+  
+::-webkit-scrollbar-track{
+    border-width:0;
+    background: $secondary-color;
+}
+
+
+
+
+
+
+
+
+.response-bg{
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+
+
+
+h1, h2{
+    font-weight: 500;
+    font-size: 28px;
+    @media screen and ( max-width: $tab-size ) {
+        font-size: 24px;
+    }
+    line-height: 85%;
+    color: #E5E5E5;
+    z-index: 2;
+}
+
+h1{
+    @media screen and ( max-width: $tab-size ) {
+        font-size: 18px;
+    }
+}
+
+h3{
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 95%;
+    color: #E5E5E5;
+}
+
+p{
+    color: #E5E5E5;
+    font-size: 16px;
+    line-height: 95%;
+    @media screen and ( max-width: $tab-size ) {
+        font-size: 14px;
+    }
+}
+
+
+
+
+
+.btn{
+    border-radius: $btn-radius;
+    font-size: 16px;
+    font-weight: 400;
+    height: 48px;
+    @media screen and ( max-width: $tab-size ) {
+        height: 42px;
+    }
+    display: flex;
+    align-items: center;
+    justify-content: center;    
+}
+
+
+
+.standart-btn{
+    @extend .btn;
+    border: 1.5px solid $primary-color;
+    color: $primary-color;
+    &:hover{
+        color: $secondary-color;
+        background-color: $primary-color;
+    }
+}
+
+
+.bg-btn{
+    @extend .btn;
+    border: none;
+    background-color: $primary-color;
+    color: $secondary-color;
+    &:hover{
+        background-color: $primary-hover;
+    }
+}
+
+
+
+
+
+section.section{
+    height: 100vh;
+    width: 100%;
+    overflow: auto;
+
+}
+
+#transit-block{
+    display: grid;
+    transform: translate( 0px, 0vh );
+    transition: .8s cubic-bezier(.42,.09,.34,1.05);
+}
+
+.info-block{
+    display: grid;
+    row-gap: 80px;
+    justify-items: center;
+    @media screen and ( max-width: $tab-size ) {
+        row-gap: 65px;
+    }
+}
+
+
+
+
+
+
+app-home{
+    height: 100vh;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+canvas{
+    cursor: move;
+}
+
+// styles for tools
+.tool{
+    display: grid;
+    align-self: center;
+    grid-template-columns: 1fr auto;
+    column-gap: 30px;
+    justify-self: center;
+    
+    @media screen and ( max-width: $tab-size ) {
+        grid-template-columns: auto !important;
+        row-gap: 30px;
+        > .img{
+            grid-row: 2/3;
+        }
+    }
+    
+    > :first-child{
+        align-self: center;
+    }
+
+    .img{
+        display: grid;
+        align-items: center;
+        img{
+            border-radius: 10px;
+        }
+    } 
+
+    .info{ 
+        display: grid;
+        row-gap: 40px;
+        align-content: center;
+        text-align: center;
+    }
+
+    p{
+        color: #757575;
+    }
+
+    .features{
+        margin-top: 10px;
+        display: grid;
+        row-gap: 15px;
+    }
+
+    .feature{
+        display: grid;
+        grid-auto-flow: column;
+        column-gap: 8px;
+        justify-self: start;
+        color: #E5E5E5;
+        align-items: center;
+        text-align: start;
+    }
+
+    @media screen and ( max-width: $tab-size ) {
+        h3{
+            &::after{
+                content: '';
+                width: 100%;
+                height: 2px;
+                bottom: -4px;
+                border-radius: 5px;
+                background-color: #00AE98;
+                display: block;
+                position: absolute;
+            }
+            justify-self: center;
+            position: relative;
+        }
+
+        .features{
+            margin-top: 10px;
+            row-gap: 12px;
+            width: 460px;
+            justify-self: center;
+            @media screen and ( max-width: 490px ) {
+                width: auto;
+                justify-self: stretch;
+            }
+        }
+
+        .feature{
+            font-size: 14px;
+        }
+
+        .info{
+            row-gap: 20px;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#cactus-3d{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 0;
+
+}
