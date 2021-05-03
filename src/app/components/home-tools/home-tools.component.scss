@@ -37,12 +37,6 @@ $tab-size: 780px;
         row-gap: 60px;
     }
 
-    @media screen and ( max-width: $tab-size ) {
-
-        > * {
-            // display: none;
-        }
-    }
 }
 
 .underlay{

@@ -84,6 +84,7 @@ $tab-size: 780px;
         }
         img{
             display: initial;
+            transition: .6s;
         }
 
         &.active{
@@ -94,6 +95,10 @@ $tab-size: 780px;
     
             .hr{
                 opacity: 1;
+            }
+
+            img{
+                transform: rotate(-180deg);
             }
         }
 
