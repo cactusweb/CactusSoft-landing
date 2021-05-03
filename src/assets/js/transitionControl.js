@@ -47,12 +47,12 @@ document.querySelector( '#toNextSection' ).addEventListener( 'click', () => {
 
 
 
-document.querySelector('header').addEventListener( 'touchstart', e => handleTouchStart(e));
+document.querySelector('header').addEventListener( 'touchstart', e => handleTouchStart(e), { passive: true });
 document.querySelector('header').addEventListener( 'touchmove', e => onTouchMove(e, 'header') );
 
 
-document.querySelector(`#${blockId}`).addEventListener( 'touchstart', e => handleTouchStart(e));
-document.querySelector(`#${blockId}`).addEventListener( 'touchmove', e => onTouchMove(e, 'main') );
+document.querySelector(`#${blockId}`).addEventListener( 'touchstart', e => handleTouchStart(e), { passive: true });
+document.querySelector(`#${blockId}`).addEventListener( 'touchmove', e => onTouchMove(e, 'main'), { passive: true } );
 
 document.querySelector( `#${blockId}` ).addEventListener( 'wheel', e => onWheelMove( e, 'main' ) )
 document.querySelector( `header` ).addEventListener( 'wheel', e => onWheelMove( e, 'header' ) )

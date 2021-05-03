@@ -23,7 +23,7 @@ function destroyHorizontalControl(){
     isHorizontalScrollInit = false;
     underlayBlock.removeAttribute('style');
     horizontalBlock.removeAttribute( 'style' );
-    horizontalBlock.removeEventListener( 'wheel', onWheelHorisont, true)
+    horizontalBlock.removeEventListener( 'wheel', onWheelHorisont, false)
 
     innersBlocks.forEach( block => {
         block.removeAttribute('style');
@@ -36,7 +36,7 @@ function initHorizontalScrollControl(){
     isHorizontalScrollInit = true;
 
     horizontalBlock.addEventListener( 'wheel', onWheelHorisont, true)
-    horizontalBlock.addEventListener("touchstart", touchStart, false);
+    horizontalBlock.addEventListener("touchstart", touchStart, { passive: true });
     horizontalBlock.addEventListener("touchmove", touchMove, false);
     horizontalBlock.style.width = "100%"
     setStartTranslateX( )
@@ -128,7 +128,6 @@ function touchStart(event) {
   
       e.deltaX = start.x - event.touches[0].pageX;
       e.deltaY = start.y - event.touches[0].pageY;
-    //   console.log(currentTranslateX <= getFullHorizontalBlockWidth() - horizontalBlock.offsetWidth + horizontalBlock.offsetWidth/2 - innersBlocks[0].offsetWidth  && e.deltaY < 0 )
     
       if ( 
             (
@@ -218,7 +217,6 @@ function onClickChangeBlock( toStart ){
 
 function setCurrentStatusOfSwitchBtns(){
     let center = (getFullHorizontalBlockWidth() - horizontalBlock.offsetWidth + horizontalBlock.offsetWidth/2 - innersBlocks[0].offsetWidth) + (horizontalBlock.offsetWidth/-2 )
-    console.log( center )
     if ( 
         currentTranslateX <= center && !switchBtns[0].classList.contains('active') 
         || 
