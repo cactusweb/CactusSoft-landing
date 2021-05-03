@@ -277,6 +277,7 @@ canvas{
     .img{
         display: grid;
         align-items: center;
+        justify-items: center;
         img{
             border-radius: 10px;
         }
@@ -330,7 +331,7 @@ canvas{
             row-gap: 12px;
             width: 460px;
             justify-self: center;
-            @media screen and ( max-width: 490px ) {
+            @media screen and ( max-width: 550px ) {
                 width: auto;
                 justify-self: stretch;
             }
