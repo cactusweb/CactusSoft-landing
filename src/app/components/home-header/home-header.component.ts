@@ -1,5 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-import { HttpService } from 'src/app/services/http/http.service';
+import { Component } from '@angular/core';
 
 
 @Component({
@@ -7,14 +6,6 @@ import { HttpService } from 'src/app/services/http/http.service';
   templateUrl: './home-header.component.html',
   styleUrls: ['./home-header.component.scss']
 })
-export class HomeHeaderComponent implements OnInit {
-  fullpage;
-
-  constructor(
-  ) { }
-
-  ngOnInit(): void {
-  }
-
+export class HomeHeaderComponent {
 
 }

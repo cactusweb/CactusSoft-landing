@@ -8,8 +8,6 @@ import { Component, OnInit } from '@angular/core';
 export class HomeFaqComponent implements OnInit {
   cards
 
-  constructor() { }
-
   ngOnInit(): void {
     this.cards = document.querySelectorAll( '.faq-cards .card' );
     this.listenOpeningQuestion();

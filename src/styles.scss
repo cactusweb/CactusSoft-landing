@@ -10,6 +10,8 @@ $danger-color: #E56363;
 $btn-radius: 8px;
 $tab-size: 780px;
 
+$max-width-horizontal-scroll: 840px;
+
 
 .primary-bg{
     background-color: $primary-color;
@@ -262,7 +264,7 @@ canvas{
     column-gap: 30px;
     justify-self: center;
     
-    @media screen and ( max-width: $tab-size ) {
+    @media screen and ( max-width: $max-width-horizontal-scroll ) {
         grid-template-columns: auto !important;
         row-gap: 30px;
         > .img{
@@ -310,7 +312,7 @@ canvas{
         text-align: start;
     }
 
-    @media screen and ( max-width: $tab-size ) {
+    @media screen and ( max-width: $max-width-horizontal-scroll ) {
         h3{
             &::after{
                 content: '';
@@ -331,7 +333,7 @@ canvas{
             row-gap: 12px;
             width: 460px;
             justify-self: center;
-            @media screen and ( max-width: 550px ) {
+            @media screen and ( max-width: 480px ) {
                 width: auto;
                 justify-self: stretch;
             }

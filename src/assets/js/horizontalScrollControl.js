@@ -5,7 +5,7 @@ let switchBtns = document.querySelectorAll(`#horizontal-scroll-btns button`);
 currentTranslateX = 0;
 columnGap = 800;
 
-let tabSize = 780;
+let tabSize = 830;
 
 let isHorizontalScrollInit = false;
 

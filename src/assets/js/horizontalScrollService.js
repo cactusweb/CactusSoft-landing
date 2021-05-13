@@ -174,6 +174,8 @@ function setNewTranslateX( deltaX ){
             horizontalBlock.style.pointerEvents = 'unset';
         }, 200);
         currentTranslateX = horizontalBlock.offsetWidth/ -2;
+        onLeaveTopOfMain()
+
     } else
     if ( currentTranslateX + deltaX >= getFullHorizontalBlockWidth() - horizontalBlock.offsetWidth + horizontalBlock.offsetWidth/2 - innersBlocks[0].offsetWidth ){
         currentTranslateX = getFullHorizontalBlockWidth() - horizontalBlock.offsetWidth + horizontalBlock.offsetWidth/2 - innersBlocks[0].offsetWidth;

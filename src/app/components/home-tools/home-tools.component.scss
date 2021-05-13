@@ -1,4 +1,4 @@
-$tab-size: 780px;
+$tab-size: 840px;
 
 .info-block{
     row-gap: 30px;
@@ -76,6 +76,10 @@ $tab-size: 780px;
     height: 38px;
     border-radius: 8px;
     border: none;
+    &:hover{
+        background-color: #262626;
+    }
+    
     &.active{
         color: #00AE98;
         background-color: #262626;

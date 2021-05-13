@@ -119,6 +119,7 @@ $tab-size: 780px;
 
 
 .card h3{
+    justify-self: start;
     @media screen and ( max-width: $tab-size ) {
         cursor: pointer;
     }

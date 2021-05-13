@@ -7,9 +7,15 @@
         <div class="feature"></div>
         <div class="feature"></div>
 
-        <div id="three-dimensional">
+        <div id="three-dimensional" (mouseenter)="hidePrompt()" (mouseleave)="showPrompt()">
             <app-cactus-three-dimensional></app-cactus-three-dimensional>
             <img src="/assets/img/others/arrows-direction.svg" alt="">
+            <div class="prompt">
+                <svg xmlns="http://www.w3.org/2000/svg" width="38" height="12" viewBox="0 0 38 12" fill="none">
+                    <path d="M1 1C3.25 5.375 10 11 19 11C28 11 34.75 5.375 37 1M1 1V3.5M1 1L3.29091 2.25M37 1V3.5M37 1L34.7091 2.25" stroke="#757575" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                you can rotate it!
+            </div>
         </div>
 
         <div class="feature"></div>

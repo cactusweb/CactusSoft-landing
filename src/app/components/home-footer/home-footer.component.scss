@@ -73,6 +73,13 @@ div.bg{
     @media screen and ( max-width: $tab-size ) {
         margin-top: 0;
     }
+    a{
+        transition: .6s;
+        color: #fff;
+        &:hover{
+            color: #589EFF;
+        }
+    }
 }
 
 .user-agreement{
@@ -86,5 +93,17 @@ div.bg{
     transition: .6s;
     &:hover{
         color: #e4e4e4;
+    }
+}
+
+
+
+a{
+    svg path{
+        transition: .6s;
+    }
+
+    &:hover svg path{
+        fill: #00AE98;
     }
 }

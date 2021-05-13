@@ -1,9 +1,11 @@
-$tab-size: 780px;
+$tab-size: 840px;
 
 .tool{
     grid-template-columns: 1fr 1fr;
     .info{
-        padding: 0px 30px;
+        @media screen and ( min-width: $tab-size ) {
+            padding: 0px 30px;
+        }
     }
 }
 
@@ -16,7 +18,7 @@ $tab-size: 780px;
         padding: 0px 30px;
         img{
             width: 100%;
-            max-width: 400px;
+            max-width: 350px;
         }
     }
 }

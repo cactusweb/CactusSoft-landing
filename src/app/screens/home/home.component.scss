@@ -1,3 +1,5 @@
+$tab-size: 780px;
+
 app-home-header{
     position: fixed;
     top: 0px;
@@ -31,7 +33,10 @@ section:not(.fullscreen){
 main{
     padding: 80px 0px;
     display: grid;
-    row-gap: 100px;
+    row-gap: 120px;
+    @media screen and ( max-width: $tab-size ) {
+        row-gap: 105px;
+    }
 }
 
 section.main{
