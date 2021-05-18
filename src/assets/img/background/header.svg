@@ -5,7 +5,7 @@
 <circle cx="733" cy="415" r="603" fill="#242424"/>
 <circle cx="733" cy="415" r="435" fill="#272727"/>
 <circle cx="733" cy="415" r="229" fill="#292929"/>
-<g opacity="0.7">
+<g opacity="0.9">
 <path d="M984.5 86.5L911.5 143L1066 213L984.5 86.5Z" fill="#017C70" stroke="#00544C" stroke-width="0.5"/>
 <path d="M885 267.5L911.5 143L1066 213L885 267.5Z" fill="#003833" stroke="#00544C" stroke-width="0.5"/>
 <path d="M1099.5 46L984.5 86.5L1066 213L1099.5 46Z" fill="#024741" stroke="#00544C" stroke-width="0.5"/>
@@ -292,7 +292,7 @@
 <path d="M1377 513L1373 489.5L1326 516L1377 513Z" fill="#07665D" stroke="#076E64" stroke-width="0.5"/>
 <path d="M1387 574L1305 640.5L1270 569L1387 574Z" fill="#076E64" stroke="#076E64" stroke-width="0.5"/>
 <path d="M1326 516L1377 513L1312 571L1326 516Z" fill="#098277" stroke="#076E64" stroke-width="0.5"/>
-<path d="M1312 571L1326 516L1234.81 567.443L1312 571Z" fill="#077368" stroke="#076E64" stroke-width="0.5"/>
+<path d="M1312 571L1326 516L1234.8 567.443L1312 571Z" fill="#077368" stroke="#076E64" stroke-width="0.5"/>
 <path d="M1270 569L1236.5 638L1208.5 565.5L1270 569Z" fill="#08756B" stroke="#076E64" stroke-width="0.5"/>
 <path d="M1186 506L1236.5 638L1127 517L1186 506Z" fill="#076B62" stroke="#076E64" stroke-width="0.5"/>
 <path d="M1224 481.5L1208.5 565.5L1235.5 567L1224 481.5Z" fill="#085A53" stroke="#076E64" stroke-width="0.5"/>
