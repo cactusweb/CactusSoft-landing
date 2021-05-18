@@ -16,7 +16,7 @@ export class HomeFaqComponent implements OnInit {
   listenOpeningQuestion(){
     this.cards.forEach( card => {
       card.addEventListener( 'click', () =>{
-        if ( window.innerWidth > 780 ) return;
+        if ( window.innerWidth > 900 ) return;
 
         card.classList.toggle('active');
 

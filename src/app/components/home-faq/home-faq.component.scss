@@ -1,18 +1,14 @@
-$tab-size: 780px;
+$tab-size: 900px;
 // $phone-size
 
 
 .faq-cards{
     display: grid;
-    grid-template-columns: 380px 380px;
+    grid-template-columns: 413px 413px;
 
-    @media screen and ( max-width: 830px ) {
-        grid-template-columns: 375px 375px;
-        gap: 20px;
-    }
-    @media ( max-width: 780px ){
+    @media ( max-width: $tab-size ){
         margin: 0px 20px;
-        grid-template-columns: minmax( 200px, 380px);
+        grid-template-columns: minmax( 200px, 500px);
     }
 
     @media screen and ( max-width: 240px ) {
@@ -20,7 +16,6 @@ $tab-size: 780px;
     }
     
     justify-content: center;
-    justify-items: center;
     gap: 30px;
 
 }
@@ -47,6 +42,9 @@ $tab-size: 780px;
     p{
         color: #757575;
         transition: .6s;
+        @media screen and ( max-width: $tab-size ) {
+            br{ display: none; }
+        }
     }
 
 

@@ -1,7 +1,7 @@
-$tab-size: 840px;
+$tab-size: 900px;
 
 .img img{
-    width: 465px;
+    width: 490px;
 }
 
 @media screen and ( max-width: $tab-size ) {
@@ -16,3 +16,7 @@ $tab-size: 840px;
 
 }
 
+
+.tool{
+    column-gap: 60px;
+}

@@ -18,7 +18,7 @@ export class CactusThreeDimensionalComponent implements OnInit {
 
   ngOnInit() {
     window.addEventListener( 'resize', e => {
-      if ( window.innerWidth > 780 && !this.isInited ) this.initCactus3D(); 
+      if ( window.innerWidth > 900 && !this.isInited ) this.initCactus3D(); 
     })
   }
 

@@ -10,7 +10,8 @@ $danger-color: #E56363;
 $btn-radius: 8px;
 $tab-size: 780px;
 
-$max-width-horizontal-scroll: 840px;
+
+$max-width-horizontal-scroll: 900px;
 
 
 .primary-bg{
@@ -149,6 +150,9 @@ h1{
 h3{
     font-size: 18px;
     font-weight: 500;
+    @media screen and ( max-width: $tab-size ) {
+        font-size: 16px;
+    }
     line-height: 95%;
     color: #E5E5E5;
 }
@@ -271,6 +275,12 @@ canvas{
             grid-row: 2/3;
         }
     }
+
+    h3{
+        @media screen and ( max-width: $tab-size ) {
+            font-size: 18px !important;
+        }
+    }
     
     > :first-child{
         align-self: center;
@@ -289,7 +299,7 @@ canvas{
         display: grid;
         row-gap: 40px;
         align-content: center;
-        text-align: center;
+        text-align: left;
     }
 
     p{
@@ -306,10 +316,14 @@ canvas{
         display: grid;
         grid-auto-flow: column;
         column-gap: 8px;
+        font-size: 16px;
         justify-self: start;
         color: #E5E5E5;
         align-items: center;
         text-align: start;
+        @media screen and ( max-width: $tab-size ) {
+            font-size: 14px;
+        }
     }
 
     @media screen and ( max-width: $max-width-horizontal-scroll ) {
@@ -340,11 +354,11 @@ canvas{
         }
 
         .feature{
-            font-size: 14px;
         }
 
         .info{
             row-gap: 20px;
+            text-align: center;
         }
     }
 }

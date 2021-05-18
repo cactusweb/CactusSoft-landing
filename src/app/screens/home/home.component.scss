@@ -31,10 +31,11 @@ section:not(.fullscreen){
 
 
 main{
-    padding: 80px 0px;
+    padding: 30px 0px 80px;
     display: grid;
     row-gap: 120px;
     @media screen and ( max-width: $tab-size ) {
+        padding: 80px 0px;
         row-gap: 105px;
     }
 }

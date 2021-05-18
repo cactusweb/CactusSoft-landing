@@ -5,7 +5,7 @@ let switchBtns = document.querySelectorAll(`#horizontal-scroll-btns button`);
 currentTranslateX = 0;
 columnGap = 800;
 
-let tabSize = 830;
+let tabSize = 900;
 
 let isHorizontalScrollInit = false;
 
@@ -16,7 +16,7 @@ let isHorizontalScrollInit = false;
 
 
 window.addEventListener( 'resize', () => {
-    if ( window.innerWidth <= 780 && isHorizontalScrollInit ){
+    if ( window.innerWidth <= tabSize && isHorizontalScrollInit ){
         destroyHorizontalControl();
     }
     else

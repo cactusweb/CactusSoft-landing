@@ -3,7 +3,7 @@ $mob-size: 480px;
 
 header{
     height: 100%;
-    background-image: url('/assets/img/background/home-header.svg');
+    background-image: url('/assets/img/background/header.svg');
     // background-position: left center;
 
     display: grid;
@@ -11,10 +11,12 @@ header{
     transition: .4s;
 
     @media screen and ( max-width: $tab-size ) {
-        background-image: url('/assets/img/background/home-header-tab.svg');
+        background-image: url('/assets/img/background/header-tab.svg');
+        background-position: left;
     }
     @media screen and ( max-width: $mob-size ) {
-        background-image: url('/assets/img/background/home-header-mobile.svg');
+        background-image: url('/assets/img/background/header-mob.svg');
+        position: center;
     }
 }
 
@@ -56,7 +58,14 @@ app-navbar{
         margin-top: 15px;
         justify-self: center;
         width: 152px;
+        @media screen and ( max-width: $tab-size ) {
+            background: rgba(39, 39, 39, 0.85);
+            &:hover{
+                background: #00AE98;
+            }
+        }
     }
+    padding: 0px 20px;
 }
 
 h1{

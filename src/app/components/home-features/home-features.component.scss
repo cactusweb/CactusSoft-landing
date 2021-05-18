@@ -1,20 +1,21 @@
-$tab-size: 780px;
+$tab-size: 900px;
 
 .features{
     display: grid;
     grid-template-rows: 140px 140px 140px;
     row-gap: 10px;
-    grid-template-columns: repeat(3, 216px);
+    grid-template-columns: repeat(3, 252px);
     column-gap: 50px;
 
     @media screen and ( max-width: $tab-size ) {
-        > .feature{
-            min-height: 140px;
-        }
-        grid-template-columns: minmax( auto, 288px );   
+        // > .feature{
+        //     min-height: 140px;
+        // }
+        grid-template-columns: minmax( auto, 400px ); 
+        grid-template-rows: repeat(4, min-content);  
         padding: 0px 20px;     
         justify-content: center;
-        row-gap: 20px;
+        row-gap: 35px;
     }
 }
 
@@ -44,10 +45,40 @@ $tab-size: 780px;
     z-index: 1;
     background-color: #222222;
     border-radius: 8px;
+
+    padding: 25px 15px 20px;
+    @media screen and ( max-width: $tab-size ) {
+        padding-bottom: 25px;
+    }
+    grid-template-rows: min-content 1fr;
+
+    display: grid;
+    row-gap: 12px;
+
+    text-align: center;
+
+    position: relative;
+
     @media screen and ( min-width: $tab-size ) {
         &:nth-child(4), &:nth-child(5){
             grid-row: 3/4;
         }   
+    }
+
+    img{
+        position: absolute;
+        left: 50%;
+        top: -30px;
+        transform: translate( -50%, 0 );
+        @media screen and ( max-width: $tab-size ) {
+            width: 40px;
+            height: 40px;
+            top: -25px;
+        }
+    }
+
+    p{
+        color: #757575;
     }
 }
 
