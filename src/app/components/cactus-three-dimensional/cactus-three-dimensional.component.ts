@@ -12,11 +12,13 @@ export class CactusThreeDimensionalComponent implements OnInit {
   isInited = false;
 
   constructor() {
-    if ( window.innerWidth > 780 )
-      this.initCactus3D();
+    // if ( window.innerWidth > 780 )
+    //   this.initCactus3D();
    }
 
   ngOnInit() {
+    if ( window.innerWidth > 780 )
+      this.initCactus3D();
     window.addEventListener( 'resize', e => {
       if ( window.innerWidth > 900 && !this.isInited ) this.initCactus3D(); 
     })
@@ -45,7 +47,6 @@ export class CactusThreeDimensionalComponent implements OnInit {
     controls.minPolarAngle = Math.PI / 2.5;
     controls.maxPolarAngle = Math.PI / 1.8;
     controls.update();
-
 
     document.querySelector('#three-dimensional').appendChild( renderer.domElement );
     let aLight = new AmbientLight( 0xFFFFFF, 1.4 )

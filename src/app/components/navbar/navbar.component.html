@@ -1,8 +1,19 @@
 <nav>
 
-    <img src="/assets/cactussoft.svg" alt="logo">
+    <div *ngIf="isRouterLink; then router else reload"></div>
+    <ng-template #router>
+        <a routerLink="/" routerLinkActive="default" [routerLinkActiveOptions]="{exact:true}">
+            <img src="/assets/cactussoft.svg" alt="logo" >
+        </a>
+    </ng-template>
 
-    <a class="bg-btn" routerLink="/bind">
+    <ng-template #reload>
+        <a href="/">
+            <img src="/assets/cactussoft.svg" alt="logo" >
+        </a>
+    </ng-template>
+
+    <a class="bg-btn" href="https://dash.cactussoft.io/bind">
         Dashboard
     </a>
 

@@ -20,6 +20,53 @@ header{
     }
 }
 
+.parallax-block{
+    @media screen and ( max-width: $tab-size ){
+        display: none;
+    }
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    pointer-events: none;
+    transform-style: preserve-3d;
+    perspective: 1px;
+    perspective-origin: 0 0;
+    > *{
+        width: 105%;
+        height: 100%;
+        // position: absolute;
+        bottom: 0px;
+        left: 0px;
+        // background-size: cover;
+        background-position: bottom;
+        transition: .1s;
+
+        // will-change: scroll-position;
+        
+        // perspective: 1px;
+        // perspective-origin: 0 0;
+        position: sticky;
+        transform-origin: 0 0;
+        
+    }
+
+    > .first{
+        background-image: url('/assets/img/background/header-parallax-1.svg');
+    }
+    > .second{
+        background-image: url('/assets/img/background/header-parallax-2.svg');
+    }
+    > .third{
+        background-image: url('/assets/img/background/header-parallax-3.svg');
+        top: auto;
+        bottom: -3%;
+        height: 103%;
+        
+    }
+}
+
 
 
 app-navbar{

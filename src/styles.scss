@@ -44,6 +44,18 @@ app-root > *{
     display: grid;
 }
 
+app-user-agreement{
+    height: 100vh;
+    overflow: auto;
+
+    display: grid;
+    grid-template-rows: auto 1fr;
+    row-gap: 80px;
+    @media screen and ( max-width: $tab-size ) {
+        row-gap: 40px;
+    }
+}
+
 *{
     outline: none;
     &::selection{
@@ -87,6 +99,10 @@ ul, li, p, h1, h2, h3, h4{
 }
 
 
+
+router-outlet{
+    position: absolute;
+}
 
 
 
@@ -353,8 +369,6 @@ canvas{
             }
         }
 
-        .feature{
-        }
 
         .info{
             row-gap: 20px;

@@ -14,6 +14,15 @@ nav{
     }
 }
 
+a:first-child{
+    display: grid;
+    align-items: center;
+}
+
+a:last-child{
+    box-shadow: -3px 3px 7px rgba(0, 0, 0, 0.35);
+}
+
 img{
     height: 54px;
     @media screen and ( max-width: 280px ) {
@@ -26,4 +35,9 @@ img{
 
 .bg-btn{
     width: 152px;
+}
+
+
+.default{
+    cursor: default;
 }

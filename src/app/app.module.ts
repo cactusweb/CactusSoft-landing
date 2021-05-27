@@ -14,6 +14,7 @@ import { ToolDiscordAloComponent } from './components/tool-discord-alo/tool-disc
 import { HomeToolsComponent } from './components/home-tools/home-tools.component';
 import { HomeFeaturesComponent } from './components/home-features/home-features.component';
 import { HomeFooterComponent } from './components/home-footer/home-footer.component';
+import { UserAgreementComponent } from './screens/user-agreement/user-agreement.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { HomeFooterComponent } from './components/home-footer/home-footer.compon
     HomeToolsComponent,
     HomeFeaturesComponent,
     HomeFooterComponent,
+    UserAgreementComponent,
   ],
   imports: [
     BrowserModule,
