@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -6,5 +7,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent {
+
+  constructor(
+    private router: Router
+  ){
+    if ( this.router.url == '' || this.router.url == '/' || this.router.url[1] == '?' )
+      return;
+
+    window.location.href = `https://dash.cactussoft.io/${this.router.url}`
+  }
 
 }
