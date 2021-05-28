@@ -5,9 +5,9 @@ import { UserAgreementComponent } from './screens/user-agreement/user-agreement.
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
-  { path: '/bind', component: HomeComponent },
-  { path: '/dashboard', component: HomeComponent },
-  { path: '/purchase', component: HomeComponent },
+  { path: 'bind', component: HomeComponent },
+  { path: 'dashboard', component: HomeComponent },
+  { path: 'purchase', component: HomeComponent },
   { path: 'user_agreement', component: UserAgreementComponent },
   { path: '**', redirectTo: '/' }
 ];
