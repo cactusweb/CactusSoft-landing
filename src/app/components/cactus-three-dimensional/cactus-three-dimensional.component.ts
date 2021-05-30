@@ -28,12 +28,12 @@ export class CactusThreeDimensionalComponent implements OnInit {
   initCactus3D(){
     this.isInited = true;
     let scene = new Scene();
-    let camera = new PerspectiveCamera( 50, 480/360, 0.1, 1000 );
+    let camera = new PerspectiveCamera( 50, 280/360, 0.1, 1000 );
    
 
     let renderer = new WebGLRenderer({ alpha: true, antialias: true });
     renderer.setClearColor( 0x000000, 0 );
-    renderer.setSize( 480, 360 );
+    renderer.setSize( 280, 360 );
     renderer.domElement.setAttribute( 'id', 'cactus-3d' )
     
     let controls = new OrbitControls(camera, renderer.domElement)
@@ -60,7 +60,7 @@ export class CactusThreeDimensionalComponent implements OnInit {
 
     loader.load( '/assets/3d/cocktus_v3.gltf', (gltf) => {
       obj = gltf;
-      obj.scene.scale.set( 0.9, 1.2, 1 )
+      obj.scene.scale.set( .9, 1.2, 1.05 )
       obj.scene.rotation.y = 1.4;
       scene.add( obj.scene );
     })

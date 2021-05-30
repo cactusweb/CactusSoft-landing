@@ -5,10 +5,12 @@ $tab-size: 900px;
 .faq-cards{
     display: grid;
     grid-template-columns: 413px 413px;
+    gap: 30px;
 
     @media ( max-width: $tab-size ){
         margin: 0px 20px;
         grid-template-columns: minmax( 200px, 500px);
+        gap: 16px;
     }
 
     @media screen and ( max-width: 240px ) {
@@ -16,7 +18,6 @@ $tab-size: 900px;
     }
     
     justify-content: center;
-    gap: 30px;
 
 }
 
