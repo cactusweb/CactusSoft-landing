@@ -10,6 +10,7 @@ import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
 })
 export class CactusThreeDimensionalComponent implements OnInit {
   isInited = false;
+  isDrop3D: boolean = new Date().getTime() >= 1624219200000;
 
   constructor() {
     // if ( window.innerWidth > 780 )
@@ -38,11 +39,16 @@ export class CactusThreeDimensionalComponent implements OnInit {
     
     let controls = new OrbitControls(camera, renderer.domElement)
     controls.enableDamping = true
-    controls.dampingFactor = 0.6
-    controls.enableZoom = false;
-    controls.target.set(0, 8.5, 0);
-    camera.position.y = 8.5;
-    camera.position.z = 25;
+    controls.dampingFactor = 1
+    controls.enableZoom = this.isDrop3D;
+    controls.target.set(0, this.isDrop3D ? 7.5 : 8.5, 0);
+    camera.position.y = this.isDrop3D ? 7.5 : 8.5;
+    // normal - 8.5
+    camera.position.z =  this.isDrop3D ? 21.5 : 25;
+
+    // normal:
+    // camera.position.z = 25;
+    
     
     controls.minPolarAngle = Math.PI / 2.5;
     controls.maxPolarAngle = Math.PI / 1.8;
@@ -56,11 +62,14 @@ export class CactusThreeDimensionalComponent implements OnInit {
     scene.add( pLight );
     let loader = new GLTFLoader();
     let obj = null;
-    
 
-    loader.load( '/assets/3d/cocktus_v3.gltf', (gltf) => {
+    loader.load( this.isDrop3D ? '/assets/3d/cocktus_v3-drop.gltf' : '/assets/3d/cocktus_v3.gltf', (gltf) => {
       obj = gltf;
+      this.isDrop3D ?
+      obj.scene.scale.set( .225, 0.3, .2625 )
+      :
       obj.scene.scale.set( .9, 1.2, 1.05 )
+
       obj.scene.rotation.y = 1.4;
       scene.add( obj.scene );
     })
