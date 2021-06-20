@@ -10,7 +10,7 @@ import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
 })
 export class CactusThreeDimensionalComponent implements OnInit {
   isInited = false;
-  isDrop3D: boolean = new Date().getTime() >= 1624219200000;
+  isDrop3D: boolean = new Date().getTime() >= 1624221000000;
 
   constructor() {
     // if ( window.innerWidth > 780 )
