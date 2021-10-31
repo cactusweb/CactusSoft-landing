@@ -24,12 +24,12 @@ a:last-child{
 }
 
 img{
-    height: 54px;
+    height: 72px;
     @media screen and ( max-width: 280px ) {
         display: none;
     }
     @media screen and ( max-width: $tab-size ) {
-        height: 42px;
+        height: 56px;
     }
 }
 
