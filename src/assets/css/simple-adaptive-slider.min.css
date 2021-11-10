@@ -1,0 +1,130 @@
+
+.slider {
+    position: relative;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  /* стили для wrapper */
+  .slider__wrapper {
+    position: relative;
+    overflow: hidden;
+    border-radius: 4px;
+  }
+  
+  /* стили для элемента, в котором непосредственно расположены элементы (слайды) */
+  .slider__items {
+    display: flex;
+    transition: transform 0.5s ease;
+    border-radius: 4px;
+  }
+  
+  /* класс для отключения transition */
+  .transition-none {
+    transition: none;
+  }
+  
+  /* стили для элементов */
+  .slider__item {
+    flex: 0 0 100%;
+    max-width: 100%;
+    position: relative;
+    border-radius: 4px;
+  }
+  
+  /* кнопки Prev и Next */
+  .slider__control {
+    position: absolute;
+    top: 50%;
+    width: 25px;
+    height: 25px;
+    transform: translateY(-50%);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    user-select: none;
+    background: rgba(229, 229, 229, 0.15);
+    border-radius: 4px;
+    box-shadow: -1px 1px 2px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(4px);
+    border: none;
+  }
+
+  @media screen and ( max-width: 780px ) {
+    .slider__control{
+      display: none !important;
+    }
+  }
+  
+  .slider__control_show {
+    display: flex;
+  }
+  
+  .slider__control_prev {
+    left: 10px;
+  }
+  
+  .slider__control_next {
+    right: 10px;
+  }
+  
+  .slider__control::before {
+    content: '';
+    display: inline-block;
+    width: 12px;
+    height: 24px;
+    background: transparent no-repeat center center;
+    background-size: 100% 100%;
+  }
+  
+  .slider__control_prev::before {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='5' height='9' viewBox='0 0 5 9' fill='none'%3E%3Cpath d='M4 1.5L1 4.5L4 7.5' stroke='%23E5E5E5' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+    width: 6px;
+    background-size: contain;
+}
+
+.slider__control_next::before {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='5' height='9' viewBox='0 0 5 9' fill='none'%3E%3Cpath d='M1 1.5L4 4.5L1 7.5' stroke='%23E5E5E5' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+    width: 6px;
+    background-size: contain;
+  }
+  
+  /* Индикаторы */
+  .slider__indicators {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -16px;
+    transform: translate(0, 100%);
+    display: flex;
+    justify-content: center;
+    padding-left: 0;
+    margin: 0 15%;
+    list-style: none;
+    user-select: none;
+  }
+  
+  @media screen and ( max-width: 900px ) {
+      .slider__indicators{
+          bottom: -5px;
+          transform: none;
+      }
+  }
+
+  .slider__indicator {
+    flex: 0 1 auto;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    margin-right: 4px;
+    margin-left: 4px;
+    background-color: #444;
+    background-clip: padding-box;
+    cursor: pointer;
+  }
+  
+  .slider__indicator_active {
+    background-color: #fff;
+  }

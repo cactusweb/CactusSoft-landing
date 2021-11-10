@@ -1,7 +1,9 @@
 $tab-size: 900px;
-
+:host{
+    position: relative;
+}
 .tool{
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr auto;
     .info{
         @media screen and ( min-width: $tab-size ) {
             padding: 0px 30px;
@@ -13,13 +15,37 @@ $tab-size: 900px;
     width: 413px;
 }
 
-@media screen and ( max-width: $tab-size ) {
-    .img{
-        padding: 0px 30px;
-        img{
-            width: 100%;
-            max-width: 350px;
-        }
+
+
+.slider{
+    display: grid;
+    // width: 100%;
+    // height: 100%;
+
+    width: 780px;
+    height: auto;
+
+    align-self: center;
+
+    @media screen and ( max-width: $tab-size ) {
+        // padding: 0px 30px;
+        width: 100%;
+        max-width: 500px;
+        grid-row: 2/3;
     }
+
+
+    
 }
 
+.slider__wrapper{
+    display: grid;
+}
+
+
+.slider__item{
+    overflow: hidden;
+    img{
+        width: 100%;
+    }
+}

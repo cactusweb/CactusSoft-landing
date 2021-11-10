@@ -7,11 +7,11 @@ app-home-header{
     height: 100%;
 }
 
-.fullscreen{
-    width: 100%;
-    // height: 100vh;
-    pointer-events: none;
-}
+    .fullscreen{
+        width: 100%;
+        // height: 100vh;
+        pointer-events: none;
+    }
 
 section{
     transition: .4s;

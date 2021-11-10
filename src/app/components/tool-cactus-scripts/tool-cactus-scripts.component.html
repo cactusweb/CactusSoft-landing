@@ -1,6 +1,24 @@
 <div class="tool">
-    <div class="img">
+    <!-- <div class="img">
         <img src="/assets/img/tools/cactus-scripts.png" alt="Cactus Scripts screenshoot">
+    </div> -->
+    <div class="slider" id="scripts">
+        <div class="slider__wrapper">
+          <div class="slider__items">
+            <div class="slider__item">
+                <img src="/assets/img/tools/cactus-scripts.png" alt="" zoom-img>
+            </div>
+            <div class="slider__item">
+                <img src="/assets/img/tools/cactus-scripts-2.png" alt="" zoom-img>
+            </div>
+            <div class="slider__item">
+                <img src="/assets/img/tools/cactus-scripts-3.png" alt="" zoom-img>
+            </div>
+          </div>
+        </div>
+        <!-- Стрелки для перехода к предыдущему и следующему слайду -->
+        <button class="slider__control slider__control_prev"  role="button" data-slide="prev"></button>
+        <button class="slider__control slider__control_next"  role="button" data-slide="next"></button>
     </div>
 
     <div class="info">
@@ -11,63 +29,15 @@
         
         <div class="features">
 
-            <div class="feature">
+            <div class="feature" *ngFor="let feature of featurePoints">
                 <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
                     <circle cx="9" cy="9" r="9" fill="#00AE98"/>
                     <path d="M6 9L8 11L12 7" stroke="#262626" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
 
-                AIO Autofill
-            </div>
-            <div class="feature">
-                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
-                    <circle cx="9" cy="9" r="9" fill="#00AE98"/>
-                    <path d="M6 9L8 11L12 7" stroke="#262626" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-
-                Stripe autocheckout
-            </div>
-            <div class="feature">
-                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
-                    <circle cx="9" cy="9" r="9" fill="#00AE98"/>
-                    <path d="M6 9L8 11L12 7" stroke="#262626" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-
-                Shopify autocheckout
-            </div>
-            <div class="feature">
-                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
-                    <circle cx="9" cy="9" r="9" fill="#00AE98"/>
-                    <path d="M6 9L8 11L12 7" stroke="#262626" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-
-                Adidas autocheckout
+                {{feature}}
             </div>
 
-            <div class="feature">
-                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
-                    <circle cx="9" cy="9" r="9" fill="#00AE98"/>
-                    <path d="M6 9L8 11L12 7" stroke="#262626" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-
-                TL Dash scripts
-            </div>
-            <div class="feature">
-                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
-                    <circle cx="9" cy="9" r="9" fill="#00AE98"/>
-                    <path d="M6 9L8 11L12 7" stroke="#262626" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-
-                MetaLabs (Hyper) script
-            </div>
-            <div class="feature">
-                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
-                    <circle cx="9" cy="9" r="9" fill="#00AE98"/>
-                    <path d="M6 9L8 11L12 7" stroke="#262626" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-
-                Adidas Autofill + Autocheckout
-            </div>
             <div class="feature">
                 <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
                     <circle cx="9" cy="9" r="9" fill="#00AE98"/>
