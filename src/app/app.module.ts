@@ -16,6 +16,7 @@ import { HomeFeaturesComponent } from './components/home-features/home-features.
 import { HomeFooterComponent } from './components/home-footer/home-footer.component';
 import { UserAgreementComponent } from './screens/user-agreement/user-agreement.component';
 import { ZoomImgDirective } from './directives/zoom-img.directive';
+import { PricingComponent } from './components/pricing/pricing.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import { ZoomImgDirective } from './directives/zoom-img.directive';
     HomeFooterComponent,
     UserAgreementComponent,
     ZoomImgDirective,
+    PricingComponent,
   ],
   imports: [
     BrowserModule,
