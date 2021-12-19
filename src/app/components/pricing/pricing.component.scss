@@ -70,6 +70,13 @@ $tab-size: 780px;
         font-size: 16px;
         line-height: 100%;
         color: #757575;
+        a{
+            color: inherit;
+            text-decoration: underline;
+            &:hover{
+                color: #00AE98;
+            }
+        }
         @media screen and ( max-width: $tab-size ) {
             font-size: 14px;
         }
