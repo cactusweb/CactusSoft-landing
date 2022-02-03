@@ -59,6 +59,7 @@ export class CactusThreeDimensionalComponent implements OnInit {
     let pLight = new PointLight( 0xFFFFFF, 1.6 )
     pLight.position.set(2, -20, 5);
     scene.add( pLight );
+
     let loader = new GLTFLoader();
     let obj = null;
 

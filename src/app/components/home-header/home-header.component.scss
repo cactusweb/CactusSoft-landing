@@ -101,10 +101,18 @@ app-navbar{
     position: relative;
     top: -20px;
 
-    button{
+    .standart-btn{
         margin-top: 15px;
         justify-self: center;
-        width: 152px;
+        width: 216px;
+        transition: .4s;
+        svg path{
+            transition: .4s;
+        }
+    
+        &:hover svg path{
+            fill: #222;
+        }
         @media screen and ( max-width: $tab-size ) {
             background: rgba(39, 39, 39, 0.85);
             &:hover{

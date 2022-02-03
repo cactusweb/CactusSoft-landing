@@ -9,13 +9,17 @@ declare const SimpleAdaptiveSlider: any;
 export class ToolCactusScriptsComponent implements AfterContentInit {
   featurePoints = [
     'AIO Autofill',
-    'BInance requst mode',
+    'Binance requst mode',
     'OpenSea Monitor and ACO',
-    'Shopify autocheckout',
+    "MagicEden Monitor and ACO",
+    "Alpha.art Monitor and ACO",
+    "Rarity checker",
+    // "DIY clicks and fills"
+    // 'Shopify autocheckout',
     // 'Stripe autocheckout',
-    'Supreme ATC + ACO',
-    'Adidas Autofill + Autocheckout',
-    'Zalando'
+    // 'Supreme ATC + ACO',
+    // 'Adidas Autofill + Autocheckout',
+    // 'Zalando'
   ]
 
   

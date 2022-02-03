@@ -14,9 +14,17 @@ import { ToolDiscordAloComponent } from './components/tool-discord-alo/tool-disc
 import { HomeToolsComponent } from './components/home-tools/home-tools.component';
 import { HomeFeaturesComponent } from './components/home-features/home-features.component';
 import { HomeFooterComponent } from './components/home-footer/home-footer.component';
-import { UserAgreementComponent } from './screens/user-agreement/user-agreement.component';
 import { ZoomImgDirective } from './directives/zoom-img.directive';
 import { PricingComponent } from './components/pricing/pricing.component';
+import { AboutComponent } from './components/about/about.component';
+import { RoadmapComponent } from './components/roadmap/roadmap.component';
+import { DoxxedComponent } from './components/doxxed/doxxed.component';
+import { MintComponent } from './screens/mint/mint.component';
+import { NavbarMintComponent } from './components/navbar-mint/navbar-mint.component';
+import { FooterMintComponent } from './components/footer-mint/footer-mint.component';
+import { MintBlockComponent } from './components/mint-block/mint-block.component';
+import { MintTitleComponent } from './components/mint-title/mint-title.component';
+import { MintAboutComponent } from './components/mint-about/mint-about.component';
 
 @NgModule({
   declarations: [
@@ -31,9 +39,17 @@ import { PricingComponent } from './components/pricing/pricing.component';
     HomeToolsComponent,
     HomeFeaturesComponent,
     HomeFooterComponent,
-    UserAgreementComponent,
     ZoomImgDirective,
     PricingComponent,
+    AboutComponent,
+    RoadmapComponent,
+    DoxxedComponent,
+    MintComponent,
+    NavbarMintComponent,
+    FooterMintComponent,
+    MintBlockComponent,
+    MintTitleComponent,
+    MintAboutComponent,
   ],
   imports: [
     BrowserModule,

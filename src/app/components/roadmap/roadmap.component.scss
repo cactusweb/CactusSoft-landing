@@ -1,0 +1,207 @@
+.roadmap{
+    // background-image: url('/assets/img/roadmap/road.png');
+    height: 1020px;
+    // background-size: contain;
+    position: relative;
+    max-width: 960px;
+    width: 100%;
+
+    padding: 115px 0px 150px;
+    display: flex;
+    justify-content: center;
+
+    @media screen and ( max-width: 780px ) {
+        display: grid;
+        row-gap: 8px;
+        height: auto;
+        justify-items: center;
+        padding: 0px;
+    }
+}
+
+img.road{
+    height: 100%;
+    width: auto;
+    z-index: 1;
+    @media screen and ( max-width: 780px ) {
+        display: none;
+    }
+}
+
+img.to-step{
+    display: none;
+    @media screen and ( max-width: 780px ) {
+        display: initial;
+    }
+}
+
+
+.step{
+    display: grid;
+    row-gap: 16px;
+
+    position: absolute;
+    z-index: 2;
+    @media screen and (max-width: 780px) {
+        position: relative;
+        top: 0px !important;
+        left: 0px !important;
+        right: 0px !important;
+    }
+
+    &__list{
+        display: grid;
+        row-gap: 8px;
+        justify-items: center;
+        align-content: center;
+        list-style: none;
+
+        li{
+            color: #e5e5e5;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 12px;
+            position: relative;
+            &::before{
+                content: '';
+                display: block;
+                position: absolute;
+                top: 50%;
+                left: -2px;
+                transform: translate(-100%, -50%);
+
+                background-color: #e5e5e5;
+                border-radius: 50%;
+                height: 4px;
+                width: 4px;
+            }
+            &.good::before, &.super::before{
+                background: none;
+                border-radius: auto;
+                background-size: contain;
+                background-position: center;
+                background-repeat: no-repeat;
+            }
+
+            &.super::before{
+                width: 14px;
+                height: 14px;
+                background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='11' viewBox='0 0 12 11' fill='none'%3E%3Cpath d='M5.10928 0.745359C5.48043 0.0181081 6.51957 0.0181085 6.89072 0.74536L7.86715 2.65869C8.01245 2.94341 8.28511 3.14151 8.6008 3.19171L10.7222 3.52911C11.5286 3.65735 11.8497 4.64564 11.2727 5.22335L9.75476 6.74324C9.52887 6.96942 9.42473 7.28995 9.47453 7.6057L9.8092 9.72754C9.93641 10.5341 9.09572 11.1448 8.368 10.7746L6.45342 9.80066C6.16851 9.65573 5.83149 9.65573 5.54658 9.80066L3.632 10.7746C2.90428 11.1448 2.06359 10.5341 2.1908 9.72754L2.52547 7.6057C2.57527 7.28995 2.47112 6.96942 2.24524 6.74324L0.727294 5.22335C0.150326 4.64564 0.471441 3.65735 1.27779 3.52911L3.3992 3.19171C3.71489 3.14151 3.98755 2.94341 4.13285 2.65869L5.10928 0.745359Z' fill='%23B9B216'/%3E%3C/svg%3E");
+            }
+
+            &.good::before{
+                height: 10px;
+                width: 12px;
+                background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='13' height='10' viewBox='0 0 13 10' fill='none'%3E%3Cpath d='M6.51031 10C6.51031 10 15.5335 4.18368 11.4301 0.782522C8.11148 -1.9682 6.51031 3.41609 6.51031 3.41609C6.51031 3.41609 4.72165 -1.77441 1.59049 0.782522C-2.56875 4.179 6.51031 10 6.51031 10Z' fill='%23D62626'/%3E%3C/svg%3E");
+            }
+        }
+    }
+
+    &__period{
+        display: grid;
+        row-gap: 5px;
+        padding: 10px 16px;
+        border-radius: 8px;
+        background-color: #222;
+        justify-self: center;
+    }
+
+    &__name, &__date{
+        font-size: 14px;
+        line-height: 13.5px;
+
+        color: #757575;
+    }
+
+    &__name{
+        font-weight: 500;
+    }
+    &__date{
+        font-weight: 400;
+    }
+}
+
+
+
+
+#basic-modules{
+    top: 0px;
+    right: 83px;
+    > ul{
+        background-image: url('/assets/img/roadmap/step-1.png'); 
+        width: 243px; 
+        height: 157px;
+    }
+    .step__period{
+        transform: translate(10px, 0px);
+    }
+    li{
+        transform: translate(10px, -10px);
+    }
+}
+
+
+#discord-modules{
+    top: 102px;
+    left: 52px;
+    > ul{
+        background-image: url('/assets/img/roadmap/step-2.png'); 
+        width: 255px; 
+        height: 224px;
+    }
+    .step__period{
+        transform: translate(-20px, 0px);
+    }
+    li{
+        transform: translate(-20px, 15px);
+    }
+}
+
+
+
+#nft-modules{
+    top: 370px;
+    right: 135px;
+    > ul{
+        background-image: url('/assets/img/roadmap/step-3.png'); 
+        width: 196px; 
+        height: 125px;
+    }
+}
+
+
+
+
+
+#before-mint-modules{
+    top: 555px;
+    left: 125px;
+    > ul{
+        background-image: url('/assets/img/roadmap/step-4.png'); 
+        width: 270px; 
+        height: 233px;
+    }
+    .step__period, li{
+        transform: translate(-10px, 0px);
+    }
+}
+
+
+
+
+
+#after-mint-modules{
+    top: 715px;
+    right: 52px;
+    > ul{
+        background-image: url('/assets/img/roadmap/step-5.png'); 
+        width: 238px; 
+        height: 224px;
+    }
+    .step__period{
+        transform: translate(15px, 0px);
+    }
+    li{
+        transform: translate(15px, -5px);
+    }
+}

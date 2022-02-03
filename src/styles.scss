@@ -44,6 +44,15 @@ app-root > *{
     display: grid;
 }
 
+
+
+app-mint{
+    height: 100vh;
+    overflow: auto;
+
+    display: grid;
+}
+
 app-user-agreement{
     height: 100vh;
     overflow: auto;
@@ -217,7 +226,7 @@ p{
     border: none;
     background-color: $primary-color;
     color: $secondary-color;
-    &:hover{
+    &:hover:not(:disabled){
         background-color: $primary-hover;
     }
 }

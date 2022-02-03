@@ -8,12 +8,12 @@ declare const SimpleAdaptiveSlider: any;
 })
 export class ToolDiscordAloComponent implements AfterContentInit {
   featurePoints = [
-    'Discord link opener',
     'Discord joiner',
-    'Discord nitro claimer',
     'Discord message spammer',
+    'Discord invite checker',
     'Token manager',
-    'QR Decoder',
+    // `Discord AI message spammer`,
+    // 'Discord nitro claimer',
     // 'Join on copy'
   ]
 
