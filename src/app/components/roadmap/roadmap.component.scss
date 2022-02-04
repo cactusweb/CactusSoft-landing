@@ -23,6 +23,7 @@ img.road{
     height: 100%;
     width: auto;
     z-index: 1;
+    opacity: .85;
     @media screen and ( max-width: 780px ) {
         display: none;
     }
