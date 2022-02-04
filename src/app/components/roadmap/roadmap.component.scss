@@ -30,6 +30,7 @@ img.road{
 
 img.to-step{
     display: none;
+    opacity: .85;
     @media screen and ( max-width: 780px ) {
         display: initial;
     }
