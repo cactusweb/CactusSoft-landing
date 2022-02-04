@@ -31,7 +31,9 @@
               "src/assets/css/slider.min.css"
             ],
             "scripts": [
-              "src/assets/js/slider.min.js"
+              "src/assets/js/slider.min.js",
+              "src/assets/js/transit-service.min.js",
+              "src/assets/js/horizontal-scroll.min.js"
             ]
           },
           "configurations": {
