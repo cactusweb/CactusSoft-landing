@@ -34,6 +34,10 @@
 </div>
 
 <div class="mint">
-    <button class="bg-btn mint__btn" disabled>Mint 6 February</button>
-    <span class="mint__count">Minted: 0/200</span>
+    <!-- <button class="bg-btn mint__btn" disabled>Mint 6 February</button> -->
+    <app-mint-btn
+        (onGetMintedCount)="mintedCount = $event"
+        (onGetSupplyCount)="supply = $event"
+    ></app-mint-btn>
+    <span class="mint__count">Minted: {{mintedCount}}/{{supply}}</span>
 </div>

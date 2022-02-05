@@ -1,0 +1,43 @@
+<div  *ngIf="!mint.isMetaMaskConnected(); then connectBtn else mintBtn"></div>
+
+<ng-template #connectBtn>
+    <button class="bg-btn" (click)="onConnectWallet()">
+        Connect wallet
+    </button>
+</ng-template>
+
+<ng-template #mintBtn>
+
+    <button class="bg-btn cursor-default" *ngIf="loading">
+        <app-btn-loader></app-btn-loader>
+    </button>
+
+    <button class="bg-btn" *ngIf="supply == mintedCount && !loading" disabled>
+        Sold out
+    </button>
+
+    <ng-template [ngIf]='!loading && supply != mintedCount'>
+        <button class="bg-btn" (click)="onMint()" *ngIf="mintState == 1 && proof.length > 0">
+            Mint
+        </button>
+        
+        <button class="bg-btn" (click)="onMint()" *ngIf="mintState == 2">
+            Mint
+        </button>
+
+
+        <button class="bg-btn cursor-default" *ngIf="(mintState == 1 || mintState == 0) && proof.length == 0">
+            <app-btn-timer [startTime]="env.publicStartAt" (onTimerEnd)="getData()"></app-btn-timer>
+        </button>
+        
+        <button class="bg-btn cursor-default" *ngIf="mintState == 0 && proof.length > 0">
+            <app-btn-timer [startTime]="env.presellStartAt" (onTimerEnd)="getData()"></app-btn-timer>
+        </button>
+        
+    </ng-template>
+    
+</ng-template>
+
+
+
+<app-purchase-status *ngIf="showStatus"></app-purchase-status>

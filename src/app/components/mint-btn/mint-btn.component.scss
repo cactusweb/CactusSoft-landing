@@ -1,0 +1,11 @@
+button{
+    width: 196px;
+    height: 46px;
+    @media screen and ( max-width: 780px ) {
+        width: 162px;
+    }
+}
+
+.cursor-default{
+    cursor: default;
+}

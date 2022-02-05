@@ -1,0 +1,10 @@
+<div class="overlay">
+    <div class="artboard" (click)="onClose.emit()"></div>
+    <div class="popup">
+        <h3 class="popup__title">Congratulations!</h3>
+        <p class="popup__description"> 
+            The transaction was successful.
+        </p>
+        <button class="popup__close" (click)="onClose.emit()">close</button>
+    </div>
+</div>

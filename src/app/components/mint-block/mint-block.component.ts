@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./mint-block.component.scss']
 })
 export class MintBlockComponent implements OnInit {
+  mintedCount: number = 0
+  supply: number = 200;
 
   constructor() { }
 

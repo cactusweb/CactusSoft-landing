@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -25,6 +26,11 @@ import { FooterMintComponent } from './components/footer-mint/footer-mint.compon
 import { MintBlockComponent } from './components/mint-block/mint-block.component';
 import { MintTitleComponent } from './components/mint-title/mint-title.component';
 import { MintAboutComponent } from './components/mint-about/mint-about.component';
+import { MintBtnComponent } from './components/mint-btn/mint-btn.component';
+import { PurchaseStatusComponent } from './components/purchase-status/purchase-status.component';
+import { BtnTimerComponent } from './components/btn-timer/btn-timer.component';
+import { BtnLoaderComponent } from './components/btn-loader/btn-loader.component';
+import { NgxSpinnerModule } from 'ngx-spinner';
 
 @NgModule({
   declarations: [
@@ -50,11 +56,17 @@ import { MintAboutComponent } from './components/mint-about/mint-about.component
     MintBlockComponent,
     MintTitleComponent,
     MintAboutComponent,
+    MintBtnComponent,
+    PurchaseStatusComponent,
+    BtnTimerComponent,
+    BtnLoaderComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    HttpClientModule,
+    NgxSpinnerModule
   ],
   providers: [],
   bootstrap: [AppComponent]

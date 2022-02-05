@@ -229,7 +229,40 @@ p{
     &:hover:not(:disabled){
         background-color: $primary-hover;
     }
+
+    &:disabled{
+        opacity: 0.5;
+    }
 }
+
+
+button{
+    position: relative;
+    ngx-spinner div{
+        background-color: rgba( 0, 0, 0, 0) !important;
+
+        > div {
+            width: 22px !important;
+            height: 22px !important;
+            color: #262626;
+            > div{
+                border-width: 3px !important;
+                width: inherit !important;
+                height: inherit !important;
+            }
+        }
+
+    }
+}
+
+ngx-spinner{
+    border-radius: inherit;
+    > div{
+        border-radius: inherit;
+    }
+}
+
+
 
 
 

@@ -1,0 +1,56 @@
+:host{
+    z-index: 3;
+}
+.overlay, .artboard, :host{
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.artboard{
+    background: rgba(34, 34, 34, 0.8);
+}
+
+
+.popup{
+    display: grid;
+    background: #1F1C1E;
+    border-radius: 12px;
+
+    padding: 40px 64px 24px;
+
+    row-gap: 16px;
+    justify-items: center;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    &__title{
+        font-weight: normal;
+        font-size: 24px;
+        line-height: 85%;
+        color: #00AE98;
+        &--err{
+            color: #C53737;
+        }
+    }
+
+    &__desciption{
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 85%;
+    }
+
+    &__close{
+        margin-top: 24px;
+        font-size: 14px;
+        line-height: 85%;
+        color: #757575;
+        border: 0;
+    }
+}
