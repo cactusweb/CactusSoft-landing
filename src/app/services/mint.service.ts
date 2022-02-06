@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { ethers } from 'ethers';
+import { Contract, ethers } from 'ethers';
 import { environment } from 'src/environments/environment';
 
 
@@ -13,13 +13,18 @@ declare global {
 })
 export class MintService {
   apiUrl = environment.apiUrl;
-  provider = new ethers.providers.Web3Provider(window.ethereum);
-  contract = new ethers.Contract(environment.contractAddress, environment.abiMint, this.provider.getSigner())
-
+  provider;
+  contract: Contract
 
   constructor(
     private http: HttpClient
-  ) { }
+  ) {
+    if ( !window.ethereum ) return
+
+    this.provider = new ethers.providers.Web3Provider(window.ethereum);
+    this.contract = new ethers.Contract(environment.contractAddress, environment.abiMint, this.provider.getSigner())
+  
+  }
 
   async getCurrentNftCount() {
     return Number((await this.contract.totalSupply()).toString());
@@ -66,7 +71,6 @@ export class MintService {
         // эта штука откроет окно метамаска, где запросит доступ на чтение кошелька
         return await window.ethereum.request({ method: 'eth_requestAccounts' });
     } catch (error) {
-        console.error(error);
         return false;
     }
     

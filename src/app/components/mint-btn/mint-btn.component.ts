@@ -50,13 +50,16 @@ export class MintBtnComponent implements OnInit, OnDestroy {
 
 
   checkWalletConnectionState(){
-    this.isConnected = this.mint.isMetaMaskConnected()
-    console.log(this.isConnected)
-    if ( this.isConnected ){
-      this.getData();
-      this.getProof()
+    try{
+      this.isConnected = this.mint.isMetaMaskConnected()
+      console.log(this.isConnected)
+      if ( this.isConnected ){
+        this.getData();
+        this.getProof()
+      }
+      else this.onConnectWallet();
     }
-    else this.onConnectWallet();
+    catch{}
   }
 
 
