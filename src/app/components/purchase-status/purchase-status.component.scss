@@ -30,6 +30,12 @@
     left: 50%;
     transform: translate(-50%, -50%);
 
+    @media screen and ( max-width: 780px ) {
+        padding: 32px 32px 16px;
+        width: calc(100% - 40px);
+        max-width: 430px;
+    }
+
     &__title{
         font-weight: normal;
         font-size: 24px;
@@ -44,6 +50,10 @@
         font-weight: normal;
         font-size: 18px;
         line-height: 85%;
+        @media screen and ( max-width: 780px ) {
+            font-size: 14px;
+        }
+
     }
 
     &__close{
@@ -52,5 +62,13 @@
         line-height: 85%;
         color: #757575;
         border: 0;
+    }
+}
+
+.transaction-link{
+    font-size: 16px;
+    text-decoration: underline;
+    @media screen and ( max-width: 780px ) {
+        font-size: 14px;
     }
 }

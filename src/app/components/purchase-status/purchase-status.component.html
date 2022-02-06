@@ -1,9 +1,10 @@
 <div class="overlay">
     <div class="artboard" (click)="onClose.emit()"></div>
     <div class="popup">
-        <h3 class="popup__title">Congratulations!</h3>
+        <h3 class="popup__title">Submited!</h3>
         <p class="popup__description"> 
-            The transaction was successful.
+            The transaction was successful submited. <br>
+            <a class="transaction-link" [href]="'https://etherscan.io/tx/' + hash" target="_blank" rel="noopener">View on Etherscan</a>
         </p>
         <button class="popup__close" (click)="onClose.emit()">close</button>
     </div>

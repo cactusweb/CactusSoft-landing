@@ -7,6 +7,7 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 })
 export class PurchaseStatusComponent implements OnInit {
   @Output() onClose = new EventEmitter();
+  @Input() hash: string = '';
 
   constructor() { }
 

@@ -1,6 +1,6 @@
 export const environment = {
   production: true,
-  apiUrl: 'http://localhost:5000/meta',
+  apiUrl: 'http://mintapi.cactussoft.app',
   siteUrl: 'https://cactussoft.io',
   ownerId: '604797da082e6751f73ed5c3',
   ownerName: 'CactusSoft',

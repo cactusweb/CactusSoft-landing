@@ -1,6 +1,7 @@
 import { AfterViewInit, Component, EventEmitter, OnDestroy, OnInit, Output } from '@angular/core';
 import { ethers } from 'ethers';
 import { MintService } from 'src/app/services/mint.service';
+import { NotificationsService } from 'src/app/services/notifications.service';
 import { environment } from 'src/environments/environment';
 
 @Component({
@@ -20,6 +21,10 @@ export class MintBtnComponent implements OnInit, OnDestroy {
   supply: number;
   mintedCount: number;
   showStatus: boolean = false;
+  tokenCount: number = 0;
+
+
+  transactionHash: string = '';
 
   @Output() onGetMintedCount = new EventEmitter<number>()
   @Output() onGetSupplyCount = new EventEmitter<number>()
@@ -28,16 +33,15 @@ export class MintBtnComponent implements OnInit, OnDestroy {
   loading: boolean = false;
 
   constructor(
-    public mint: MintService
+    public mint: MintService,
+    private notif: NotificationsService
   ) {
   }
 
   async ngOnInit() {
-      await this.getData();
-  
-      if ( document.readyState != 'complete' )
-        window.addEventListener('load', () => this.checkWalletConnectionState())
-      else this.checkWalletConnectionState()
+    if ( document.readyState != 'complete' )
+      window.addEventListener('load', () => this.checkWalletConnectionState())
+    else this.checkWalletConnectionState()
   }
 
   ngOnDestroy(): void {
@@ -46,28 +50,41 @@ export class MintBtnComponent implements OnInit, OnDestroy {
 
   checkWalletConnectionState(){
     this.isConnected = this.mint.isMetaMaskConnected()
-    if ( this.isConnected ) this.getProof()
+    console.log(this.isConnected)
+    if ( this.isConnected ){
+      this.getData();
+      this.getProof()
+    }
     else this.onConnectWallet();
   }
 
 
   async getData(){
     this.loading = true;
+
     await this.getMintStatus();
     await this.getMintedCount();
     await this.getSupply();
+    await this.getWalletTokenCount()
+
     this.loading = false;
+    console.log(this.tokenCount, this.mintState, this.mintedCount, this.supply )
   }
 
   async getProof(){
-    this.loading = true;
 
     if ( this.mintState == 2 )
       this.proof = []
     else
       this.proof = await this.mint.getProof( window.ethereum.selectedAddress )
 
-    this.loading = false;
+    this.proof = this.proof.map(e => Uint8Array.from(atob(e), c => c.charCodeAt(0)))
+  }
+
+  async getWalletTokenCount(){
+    let res = await this.mint.getWalletTokenCount(window.ethereum.selectedAddress)
+    this.tokenCount = Number(res)
+    // this.tokenCount = 1
   }
 
   async getMintStatus(){
@@ -97,13 +114,18 @@ export class MintBtnComponent implements OnInit, OnDestroy {
     let res = await this.mint.onMint( this.proof, environment.mintPrice )
     this.loading = false;
 
-    if ( res.status == 'suc' ) this.showStatus = true;
+    if ( res.status == 'suc' ){
+      this.transactionHash = res.res?.hash
+      this.showStatus = true;
+    }
+    if ( res.status == 'err' ) this.notif.generateNotif(res.message)
   }
 
 
-  onConnectWallet(){
-    if ( !this.mint.onConnect() ) return;
-    
+  async onConnectWallet(){
+    let res = await this.mint.onConnect()
+    if ( !res ) return;
+    this.getData();
     this.getProof()
   }
 }

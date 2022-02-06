@@ -48,3 +48,18 @@ app-mint-block{
         margin-bottom: 16px;
     }
 }
+
+
+
+#notifications-block{
+    position: absolute;
+    top: 72px;
+    right: 40px;
+
+    display: grid;
+    justify-items: end;
+    transition: .4s;
+    align-content: start;
+
+    z-index: 10000;
+}

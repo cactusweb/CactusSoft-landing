@@ -1,3 +1,9 @@
+:host{
+    display: grid;
+    row-gap: 12px;
+}
+
+
 button{
     width: 196px;
     height: 46px;
@@ -9,3 +15,4 @@ button{
 .cursor-default{
     cursor: default;
 }
+

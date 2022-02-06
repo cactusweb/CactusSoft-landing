@@ -42,7 +42,7 @@ export class MintService {
   
   async getProof(walletAddress: string) {
     let res: any;
-    await this.http.get(`${this.apiUrl}/getProof?address=${walletAddress}`).toPromise()
+    await this.http.get(`${this.apiUrl}/proof/get?address=${walletAddress}`).toPromise()
       .then( (w: any) => res = w.proof )
       .catch( e => res = [] )
 
@@ -69,20 +69,23 @@ export class MintService {
         console.error(error);
         return false;
     }
+    
   }
 
 
-
+  async getWalletTokenCount(address: string) {
+    return parseInt(await this.contract.balanceOf(address))
+  }
 
   
-  async onMint(proof: any[], price: string): Promise<{ status: 'err' | 'suc'; message?: string; }> {
+  async onMint(proof: any[], price: string): Promise<{ status: 'err' | 'suc'; message?: string, res?: any }> {
 
     try {
         const result = await this.contract.mint(proof, {
             value: ethers.utils.parseEther(price)
         });
         console.log(result)
-        return { status: 'suc' };
+        return { status: 'suc', res: result };
     } catch (e) {
         return { status: 'err', message: `${e.error?.code || e.code}: ${e.error?.message || e.message}` }
     }

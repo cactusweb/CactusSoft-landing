@@ -15,8 +15,12 @@
     <button class="bg-btn" *ngIf="supply == mintedCount && !loading" disabled>
         Sold out
     </button>
+    
+    <button class="bg-btn" *ngIf="supply != mintedCount && !loading && tokenCount > 0" disabled>
+        Already minted
+    </button>
 
-    <ng-template [ngIf]='!loading && supply != mintedCount'>
+    <ng-template [ngIf]='!loading && supply != mintedCount && tokenCount == 0'>
         <button class="bg-btn" (click)="onMint()" *ngIf="mintState == 1 && proof.length > 0">
             Mint
         </button>
@@ -40,4 +44,4 @@
 
 
 
-<app-purchase-status *ngIf="showStatus"></app-purchase-status>
+<app-purchase-status *ngIf="showStatus" (onClose)="showStatus = false" [hash]="transactionHash"></app-purchase-status>
