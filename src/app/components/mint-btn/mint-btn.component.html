@@ -1,4 +1,4 @@
-<div  *ngIf="!mint.isMetaMaskConnected(); then connectBtn else mintBtn"></div>
+<div  *ngIf="!mint.isMetaMaskConnected() && !loading; then connectBtn else mintBtn"></div>
 
 <ng-template #connectBtn>
     <button class="bg-btn" (click)="onConnectWallet()">

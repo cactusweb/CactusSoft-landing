@@ -44,6 +44,6 @@
     <span class="mint__count" *ngIf="mintedCount != supply && !isSold">Minted: {{mintedCount == undefined ? 'n' : mintedCount}}/{{supply}}</span>
     <p class="mint__count" *ngIf="mintedCount == supply || isSold">
         Click here to trade <br> 
-        on <a [href]="env.openseaLink">OpenSea</a>
+        on <a [href]="env.openseaLink" target="_blank" rel="noopener">OpenSea</a>
     </p>
 </div>
