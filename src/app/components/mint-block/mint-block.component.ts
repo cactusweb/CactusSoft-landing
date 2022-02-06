@@ -11,6 +11,9 @@ export class MintBlockComponent implements OnInit {
   supply: number = 200;
   env = environment
 
+
+  isSold: boolean = false;
+
   constructor() { }
 
   ngOnInit(): void {

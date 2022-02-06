@@ -12,15 +12,15 @@
         <app-btn-loader></app-btn-loader>
     </button>
 
-    <button class="bg-btn" *ngIf="supply == mintedCount && !loading" disabled>
+    <button class="bg-btn" *ngIf="supply == mintedCount && !loading || mintState == 3" disabled>
         Sold out
     </button>
     
-    <button class="bg-btn" *ngIf="supply != mintedCount && !loading && tokenCount > 0" disabled>
+    <button class="bg-btn" *ngIf="supply != mintedCount && !loading && tokenCount > 0 && mintState != 3" disabled>
         Already minted
     </button>
 
-    <ng-template [ngIf]='!loading && supply != mintedCount && tokenCount == 0'>
+    <ng-template [ngIf]='!loading && supply != mintedCount && tokenCount == 0 && mintState != 3'>
         <button class="bg-btn" (click)="onMint()" *ngIf="mintState == 1 && proof.length > 0">
             Mint
         </button>

@@ -38,10 +38,11 @@
     <app-mint-btn
         (onGetMintedCount)="mintedCount = $event"
         (onGetSupplyCount)="supply = $event"
+        (onSoldOut)="isSold = true"
     ></app-mint-btn>
 
-    <span class="mint__count" *ngIf="mintedCount != supply">Minted: {{mintedCount == undefined ? 'n' : mintedCount}}/{{supply}}</span>
-    <p class="mint__count" *ngIf="mintedCount == supply">
+    <span class="mint__count" *ngIf="mintedCount != supply && !isSold">Minted: {{mintedCount == undefined ? 'n' : mintedCount}}/{{supply}}</span>
+    <p class="mint__count" *ngIf="mintedCount == supply || isSold">
         Click here to trade <br> 
         on <a [href]="env.openseaLink">OpenSea</a>
     </p>

@@ -28,6 +28,7 @@ export class MintBtnComponent implements OnInit, OnDestroy {
 
   @Output() onGetMintedCount = new EventEmitter<number>()
   @Output() onGetSupplyCount = new EventEmitter<number>()
+  @Output() onSoldOut = new EventEmitter();
   
 
   loading: boolean = false;
@@ -90,6 +91,9 @@ export class MintBtnComponent implements OnInit, OnDestroy {
   async getMintStatus(){
     this.mintState = await this.mint.getMintState()
     this.mintState = Number(this.mintState)
+
+    if ( this.mintState == 3 )
+      this.onSoldOut.emit()
   }
 
   async getSupply(){
