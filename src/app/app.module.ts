@@ -26,11 +26,11 @@ import { FooterMintComponent } from './components/footer-mint/footer-mint.compon
 import { MintBlockComponent } from './components/mint-block/mint-block.component';
 import { MintTitleComponent } from './components/mint-title/mint-title.component';
 import { MintAboutComponent } from './components/mint-about/mint-about.component';
-import { MintBtnComponent } from './components/mint-btn/mint-btn.component';
-import { PurchaseStatusComponent } from './components/purchase-status/purchase-status.component';
-import { BtnTimerComponent } from './components/btn-timer/btn-timer.component';
-import { BtnLoaderComponent } from './components/btn-loader/btn-loader.component';
-import { NgxSpinnerModule } from 'ngx-spinner';
+// import { MintBtnComponent } from './components/mint-btn/mint-btn.component';
+// import { PurchaseStatusComponent } from './components/purchase-status/purchase-status.component';
+// import { BtnTimerComponent } from './components/btn-timer/btn-timer.component';
+// import { BtnLoaderComponent } from './components/btn-loader/btn-loader.component';
+// import { NgxSpinnerModule } from 'ngx-spinner';
 
 @NgModule({
   declarations: [
@@ -56,17 +56,17 @@ import { NgxSpinnerModule } from 'ngx-spinner';
     MintBlockComponent,
     MintTitleComponent,
     MintAboutComponent,
-    MintBtnComponent,
-    PurchaseStatusComponent,
-    BtnTimerComponent,
-    BtnLoaderComponent,
+    // MintBtnComponent,
+    // PurchaseStatusComponent,
+    // BtnTimerComponent,
+    // BtnLoaderComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     HttpClientModule,
-    NgxSpinnerModule
+    // NgxSpinnerModule
   ],
   providers: [],
   bootstrap: [AppComponent]

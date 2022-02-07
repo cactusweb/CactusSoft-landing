@@ -93,3 +93,12 @@
         }
     }
 }
+
+
+
+#soldout{
+    width: 196px;
+    @media screen and ( max-width: 780px ) {
+        width: 162px;
+    }
+}
