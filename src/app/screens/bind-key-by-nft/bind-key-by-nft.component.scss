@@ -4,6 +4,12 @@
     row-gap: 40px;
     align-items: center;
     padding: 30px 40px;
+
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url('/assets/img/background/bind.png');
+
     @media screen and ( max-width: 780px ) {
         padding: 20px
     }
@@ -52,4 +58,7 @@ button{
     align-content: start;
 
     z-index: 10000;
+    @media screen and ( max-width: 780px ) {
+        right: 10px;
+    }
 }
