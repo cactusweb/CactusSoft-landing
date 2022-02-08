@@ -1,0 +1,10 @@
+<ng-template [ngIf]="errStatus === undefined">
+    <div class="user">
+        <h3 class="user__name">{{user?.full_name}}</h3>
+        <div class="user__avatar" [style.background-image]="'url(' + user?.avatar + ')'"></div>
+    </div>
+    <app-bind-btn></app-bind-btn>
+</ng-template>
+
+
+<app-bind-error-view [errStatus]="errStatus" *ngIf="errStatus !== undefined" (onTryAgain)="errStatus = undefined"></app-bind-error-view>

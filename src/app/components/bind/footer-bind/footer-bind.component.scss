@@ -1,0 +1,37 @@
+footer{
+    display: grid;
+    grid-auto-flow: column;
+    align-items: center;
+    column-gap: 32px;
+
+    justify-content: center;
+    justify-items: center;
+
+    @media screen and ( max-width: 780px ) {
+        grid-auto-flow: row;
+        row-gap: 24px;
+    }
+}
+
+
+.link{
+    display: grid;
+    grid-auto-flow: column;
+    column-gap: 6px;
+    align-items: center;
+
+    color: #757575;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 100%;
+    svg path{
+        transition: .7s;
+    }
+
+    &:hover{
+        color: #00AE98;
+        svg path:not(.no-fill){
+            fill: #00AE98;
+        }
+    }
+}

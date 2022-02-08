@@ -1,0 +1,12 @@
+<button class="standart-btn" *ngIf="!loading && !mint.isMetaMaskConnected()" (click)="onConnectWallet()">
+    Connect wallet
+</button>
+
+<button class="standart-btn" *ngIf="!loading && mint.isMetaMaskConnected()" (click)="createKey()">
+    Get license
+</button>
+
+
+<button class="standart-btn cursor-default" *ngIf="loading" disabled>
+    <app-btn-loader></app-btn-loader>
+</button>

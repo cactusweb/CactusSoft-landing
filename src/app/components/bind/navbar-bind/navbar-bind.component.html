@@ -1,0 +1,14 @@
+<nav>
+    <a href="/" class="logo">
+        <img src="/assets/logo_eth.svg" alt="logo" >
+    </a>
+
+
+    <a class="standart-btn" href="https://dash.cactussoft.io/bind" *ngIf="!isLoggedIn">
+        Dashboard
+    </a>
+
+    <a class="standart-btn" (click)="logout()" *ngIf="isLoggedIn" id="logout">
+        Logout
+    </a>
+</nav>

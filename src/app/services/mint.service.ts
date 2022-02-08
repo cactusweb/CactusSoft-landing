@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Contract, ethers } from 'ethers';
+import { Contract, ethers, Signer } from 'ethers';
 import { environment } from 'src/environments/environment';
 
 
@@ -15,6 +15,7 @@ export class MintService {
   apiUrl = environment.apiUrl;
   provider;
   contract: Contract
+  public signer: Signer
 
   constructor(
     private http: HttpClient
@@ -23,6 +24,7 @@ export class MintService {
 
     this.provider = new ethers.providers.Web3Provider(window.ethereum);
     this.contract = new ethers.Contract(environment.contractAddress, environment.abiMint, this.provider.getSigner())
+    this.signer = this.provider.getSigner();
   
   }
 
@@ -93,6 +95,5 @@ export class MintService {
     } catch (e) {
         return { status: 'err', message: `${e.error?.code || e.code}: ${e.error?.message || e.message}` }
     }
-
   }
 }

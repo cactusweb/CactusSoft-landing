@@ -1,0 +1,38 @@
+:host{
+    display: grid;
+    row-gap: 64px;
+    justify-items: center;
+    align-content: center;
+    @media screen and ( max-width: 780px ) {
+        row-gap: 40px;
+    }
+}
+
+
+.user{
+    display: grid;
+    row-gap: 16px;
+    justify-items: center;
+
+    &__name{
+        font-size: 24px;
+        line-height: 100%;
+        font-weight: normal;
+        @media screen and ( max-width: 780px ) {
+            font-size: 18px;
+        }
+    }
+
+    &__avatar{
+        height: 160px;
+        width: 160px;
+        border-radius: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        @media screen and ( max-width: 780px ) {
+            width: 140px;
+            height: 140px;
+        }
+    }
+}

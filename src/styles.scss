@@ -46,12 +46,13 @@ app-root > *{
 
 
 
-app-mint{
+app-mint, app-bind-key-by-nft{
     height: 100vh;
     overflow: auto;
 
     display: grid;
 }
+
 
 app-user-agreement{
     height: 100vh;
@@ -214,7 +215,7 @@ p{
     @extend .btn;
     border: 1.5px solid $primary-color;
     color: $primary-color;
-    &:hover{
+    &:hover:not(:disabled){
         color: $secondary-color;
         background-color: $primary-color;
     }
@@ -242,9 +243,8 @@ button{
         background-color: rgba( 0, 0, 0, 0) !important;
 
         > div {
-            width: 22px !important;
-            height: 22px !important;
-            color: #262626;
+            width: 25px !important;
+            height: 25px !important;
             > div{
                 border-width: 3px !important;
                 width: inherit !important;
@@ -252,6 +252,18 @@ button{
             }
         }
 
+    }
+}
+
+.bg-btn{
+    ngx-spinner div > div{
+        color: #262626;
+    }
+}
+
+.standart-btn{
+    ngx-spinner div > div{
+        color: #00AE98
     }
 }
 
@@ -557,7 +569,6 @@ canvas{
         .message{
             font-weight: normal;
             font-size: 14px;
-            line-height: 85%;
             max-width: 300px;
 
             color: #7A8A88;

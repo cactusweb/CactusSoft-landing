@@ -1,13 +1,14 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { BindKeyByNftComponent } from './screens/bind-key-by-nft/bind-key-by-nft.component';
 import { HomeComponent } from './screens/home/home.component';
-import { MintComponent } from './screens/mint/mint.component';
-import { UserAgreementComponent } from './screens/user-agreement/user-agreement.component';
+import { LoginComponent } from './screens/login/login.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
-  { path: 'mint', component: MintComponent },
-  { path: '**', redirectTo: '/' }
+  { path: 'bind', component: BindKeyByNftComponent },
+  { path: 'login', component: LoginComponent }
+  // { path: '**', redirectTo: '/' }
 ];
 
 @NgModule({

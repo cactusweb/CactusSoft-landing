@@ -1,0 +1,55 @@
+.content{
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    row-gap: 40px;
+    align-items: center;
+    padding: 30px 40px;
+    @media screen and ( max-width: 780px ) {
+        padding: 20px
+    }
+
+    > *{
+        max-width: 1400px;
+        width: 100%;
+        justify-self: center;
+    }
+}
+
+main{
+    justify-self: center;
+    display: grid;
+}
+
+button{
+    width: 279px;
+    height: 50px;
+    justify-self: center;
+
+    svg path{
+        transition: .7s;
+    }
+
+    @media screen and ( max-width: 780px ) {
+        width: 220px;
+        height: 46px;
+    }
+}
+
+.cursor-default{
+    cursor: default;
+}
+
+
+
+#notifications-block{
+    position: absolute;
+    top: 72px;
+    right: 40px;
+
+    display: grid;
+    justify-items: end;
+    transition: .4s;
+    align-content: start;
+
+    z-index: 10000;
+}

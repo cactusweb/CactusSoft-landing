@@ -1,0 +1,63 @@
+
+$tab-size: 780px;
+nav{
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    column-gap: 24px;
+
+    @media screen and ( max-width: 280px ) {
+        grid-template-columns: auto;
+    }
+
+}
+
+.logo{
+    display: grid;
+    align-items: center;
+    img{
+        height: 72px;
+        @media screen and ( max-width: 280px ) {
+            display: none;
+        }
+        @media screen and ( max-width: $tab-size ) {
+            height: 56px;
+        }
+    }
+}
+
+.standart-btn{
+    width: 180px;
+    height: 46px;
+    box-shadow: -3px 3px 7px rgba(0, 0, 0, 0.35);
+    justify-self: end;
+
+    svg path{
+        transition: .7s;
+    }
+
+    &:hover svg path{
+        fill: #222;
+    }
+
+    @media screen and ( max-width: 780px ) {
+        width: 146px;
+    }
+}
+
+
+#logout{
+    color: #555;
+    border-color: #555;
+    background: none;
+    &:hover{
+        color: #dedede;
+        border-color: #dedede;
+    }
+}
+
+
+.default{
+    cursor: default;
+}
+
