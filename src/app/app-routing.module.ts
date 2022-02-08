@@ -7,8 +7,8 @@ import { LoginComponent } from './screens/login/login.component';
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'bind', component: BindKeyByNftComponent },
-  { path: 'login', component: LoginComponent }
-  // { path: '**', redirectTo: '/' }
+  { path: 'login', component: LoginComponent },
+  { path: '**', redirectTo: '/' }
 ];
 
 @NgModule({
