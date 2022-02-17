@@ -8,5 +8,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'CactusSoft';
+
+  constructor(){
+    window.location.href = 'https://cactussoft.io'
+  }
   
 }
