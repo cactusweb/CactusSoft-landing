@@ -17,6 +17,8 @@ import { HomeFooterComponent } from './components/home-footer/home-footer.compon
 import { UserAgreementComponent } from './screens/user-agreement/user-agreement.component';
 import { ZoomImgDirective } from './directives/zoom-img.directive';
 import { PricingComponent } from './components/pricing/pricing.component';
+import { AboutComponent } from './components/about/about.component';
+import { RoadmapComponent } from './components/roadmap/roadmap.component';
 
 @NgModule({
   declarations: [
@@ -34,6 +36,8 @@ import { PricingComponent } from './components/pricing/pricing.component';
     UserAgreementComponent,
     ZoomImgDirective,
     PricingComponent,
+    AboutComponent,
+    RoadmapComponent,
   ],
   imports: [
     BrowserModule,
