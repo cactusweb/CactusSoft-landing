@@ -19,6 +19,8 @@ import { ZoomImgDirective } from './directives/zoom-img.directive';
 import { PricingComponent } from './components/pricing/pricing.component';
 import { AboutComponent } from './components/about/about.component';
 import { RoadmapComponent } from './components/roadmap/roadmap.component';
+import { PlansComponent } from './components/plans/plans.component';
+import { HowGetLicenseComponent } from './components/how-get-license/how-get-license.component';
 
 @NgModule({
   declarations: [
@@ -38,6 +40,8 @@ import { RoadmapComponent } from './components/roadmap/roadmap.component';
     PricingComponent,
     AboutComponent,
     RoadmapComponent,
+    PlansComponent,
+    HowGetLicenseComponent,
   ],
   imports: [
     BrowserModule,

@@ -24,10 +24,10 @@ $tab-size: 900px;
 
 .card{
     display: grid;
+    align-content: start;
     background: #222222;
     border-radius: 8px;
     padding: 25px;
-    padding-bottom: calc( 25px + 17px ) ;
 
     display: grid;
     row-gap: 20px;
@@ -40,7 +40,7 @@ $tab-size: 900px;
         display: none;
         cursor: pointer;
     }
-    p{
+    p, a{
         color: #757575;
         transition: .6s;
         @media screen and ( max-width: $tab-size ) {
@@ -48,14 +48,13 @@ $tab-size: 900px;
         }
     }
 
-
     @media screen and ( min-width: $tab-size ) {
         p{
             max-height: initial !important;
         }
         &:hover{
             border-radius: 2px 8px 8px 2px;
-            p{
+            p, a{
                 color: #e4e4e4;
             }
 
@@ -80,6 +79,9 @@ $tab-size: 900px;
             max-height: 0px;
             overflow: hidden;
             line-height: 13px;
+        }
+        a{
+            color: #e4e4e4;
         }
         img{
             display: initial;
@@ -137,3 +139,10 @@ h2:first-child{
     }
 }
 
+
+
+.opensea-link{
+    &:hover{
+        text-decoration: underline;
+    }
+}

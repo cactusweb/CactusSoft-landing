@@ -1,0 +1,81 @@
+$tab-size: 780px;
+
+.content{
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: 1fr auto 1fr auto 1fr;
+
+    gap: 16px;
+    
+    padding: 0px 16px;
+
+    max-width: 898px;
+    width: 100%;
+
+    @media screen and ( max-width: $tab-size ) {
+        grid-auto-flow: row;
+        grid-template-columns: auto;
+    }
+
+    svg{
+        align-self: center;
+        justify-self: center;
+
+        @media screen and ( max-width: $tab-size ) {
+            transform: rotate(90deg);
+        }
+    }
+}
+
+
+.card{
+    display: grid;
+    row-gap: 24px;
+
+    align-content: start;
+
+    padding: 16px;
+
+    border-radius: 8px;
+    background-color: #222;
+
+    @media screen and ( max-width: $tab-size ) {
+        align-content: center;
+        max-width: 500px;
+        width: 100%;
+        justify-self: center;
+    }
+
+    &__icon{
+        height: 40px;
+        @media screen and ( max-width: $tab-size ) {
+            justify-self: center;
+        }
+    }
+
+    &__descript, a{
+        color: #7A8A88;
+        font-size: 16px;
+        line-height: 100%;
+
+        @media screen and ( max-width: $tab-size ) {
+            text-align: center;
+            font-size: 14px;
+        }
+    }
+
+    a{
+        text-decoration: underline;
+        &:hover{
+            color: #00AE98;
+        }
+    }
+}
+
+.opensea-link{
+    color: #2081E2 !important;
+    text-decoration: none !important;
+    &:hover{
+        text-decoration: underline !important;
+    }
+}
