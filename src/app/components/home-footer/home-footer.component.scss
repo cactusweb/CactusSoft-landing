@@ -101,6 +101,10 @@ div.bg{
 
 
 a{
+    svg{
+        height: 20px;
+        width: 20px;
+    }
     svg path{
         transition: .6s;
     }
